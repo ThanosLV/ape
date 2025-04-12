@@ -99,6 +99,49 @@
         width: 90%;
       }
     }
+   /* Styles for devices with a max width of 600px (typically mobile devices) */
+@media screen and (max-width: 600px) {
+    body {
+      background-image: url('eyes.png');
+      background-color: #2d2928;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: colum;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .container {
+      padding: 0 10px;
+      width: 90%;
+      max-width: 500px;
+    }
+}
+
+/* Styles for devices with a min width of 1024px (desktops) */
+@media screen and (min-width: 1024px) {
+    body {
+      margin: 0;
+      background-color: #2d2928;
+      background-image: url('eyes.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .container {
+        padding: 30px;
+    }
+}
   </style>
 </head>
 <body>
