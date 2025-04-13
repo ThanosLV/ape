@@ -1,116 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Firefront | A.P.E.</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tribes Chat – APE.SUPPLIES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  margin: 0;
-  background-color: #f2e0b4; /* Sandstone */
-  font-family: 'Orbitron', sans-serif;
-  color: #111;
-}
+    body {
+      background-color: #0d0d0d;
+      color: #ffcc66;
+      font-family: 'Orbitron', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-.wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 30px 20px 80px;
-}
+    .chat-container {
+      background-color: #111;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 800px;
+      display: flex;
+      overflow: hidden;
+      box-shadow: 0 0 20px #000;
+    }
 
-.title {
-  font-size: 2.5rem;
-  color: #111;
-  text-align: center;
-  margin-bottom: 40px;
-  letter-spacing: 2px;
-}
+    .sidebar {
+      width: 30%;
+      background-color: #1a1a1a;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-.post {
-  background-color: #111;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 4px;
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
-}
+    .sidebar div {
+      font-size: 1.2rem;
+      color: #ffd966;
+    }
 
-.post-title {
-  color: #ff3c28;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0 0 10px;
-}
+    .chat {
+      width: 70%;
+      background-color: #0d0d0d;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+    }
 
-.stick-count {
-  color: #f2e0b4;
-  font-size: 0.9rem;
-  margin: 0;
-}
+    .message {
+      background-color: #000;
+      color: #ffcc66;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
 
-.tab-bar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #111;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px 0;
-  border-top: 2px solid #000;
-}
+    .emoji {
+      font-size: 2rem;
+      color: red;
+      margin-top: -1rem;
+      margin-left: 1rem;
+    }
 
-.tab {
-  color: #f2e0b4;
-  font-size: 0.9rem;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 6px 10px;
-}
+    .input {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+    }
 
-.tab.active {
-  color: #ff3c28;
-  border-bottom: 2px solid #ff3c28;
-}
-</style>
+    .input input {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      outline: none;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #000;
+      padding: 1rem 0;
+      width: 100%;
+    }
+
+    .nav button {
+      background: none;
+      border: none;
+      font-size: 1rem;
+      font-family: 'Orbitron', sans-serif;
+      color: #3af;
+      cursor: pointer;
+    }
+
+    .nav button.active {
+      color: red;
+    }
+  </style>
 </head>
 <body>
-  <main class="wrapper">
-    <h1 class="title">FIREFRONT</h1>
+  <div class="chat-container">
+    <div class="sidebar">
+      <div>Olivia</div>
+      <div>James</div>
+      <div>Chris S.</div>
+      <div>Megan</div>
+    </div>
+    <div class="chat">
+      <div>
+        <div class="message">Is the fire rising?</div>
+        <div class="message">Yes, three new posts are burning.</div>
+        <div class="emoji">💯</div>
+      </div>
+      <div class="input">
+        <input type="text" placeholder="Type a message...">
+      </div>
+    </div>
+  </div>
 
-    <section class="post">
-      <p class="post-title">ONLY FOOLS PAY FOR FAST FOOD</p>
-      <p class="stick-count">🔥 235 STICKS</p>
-    </section>
+  <div class="nav">
+    <button onclick="navigate('firefront')">FIREFRONT</button>
+    <button class="active" onclick="navigate('bonfires')">BONFIRES</button>
+    <button onclick="navigate('tribes')">TRIBES</button>
+    <button onclick="navigate('more')">MORE</button>
+  </div>
 
-    <section class="post">
-      <p class="post-title">DAY 20 OF NOT BUYING THE SNEAKERS</p>
-      <p class="stick-count">🔥 191 STICKS</p>
-    </section>
-
-    <section class="post">
-      <p class="post-title">SUBSCRIPTIONS MAKE US SLAVES</p>
-      <p class="stick-count">🔥 287 STICKS</p>
-    </section>
-
-    <section class="post">
-      <p class="post-title">ADVERTISEMENT IS WARFARE</p>
-      <p class="stick-count">🔥 421 STICKS</p>
-    </section>
-  </main>
-
-  <nav class="tab-bar">
-    <a class="tab active" href="#">Firefront</a>
-    <a class="tab" href="#">Big Fires</a>
-    <a class="tab" href="#">Tribes</a>
-    <a class="tab" href="#">More</a>
-  </nav>
+  <script>
+    function navigate(tab) {
+      alert(`Caesar sees you. Redirecting to: ${tab.toUpperCase()}`);
+      // Replace alert with actual redirect later like:
+      // window.location.href = `${tab}.html`;
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
