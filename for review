@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Firefront | APE.SUPPLIES</title>
+  <link rel="stylesheet" href="../firefront.css" />
+</head>
+<body>
+  <div class="firefront-container">
+
+    <header>
+      <h1>🔥 FIREFRONT</h1>
+      <p class="tagline">Expose ads. Ignite boycott. Caesar sees all.</p>
+    </header>
+
+    <form id="postForm" class="post-form">
+      <input type="text" id="postTitle" placeholder="WRITE TITLE IN FLAME" required />
+      <textarea id="postContent" placeholder="DROP YOUR FIRE HERE" rows="4" required></textarea>
+      <button type="submit">🔥 CAST TO FLAMES</button>
+    </form>
+
+    <!-- This is the container where posts will be injected -->
+    <div id="post-container"></div>
+
+    <nav>
+      <a href="../Firefront/firefront.html">🔥 Firefront</a>
+      <a href="../Bonfires/bonfires.html">🔥 Bonfires</a>
+      <a href="../Tribes/tribes.html">🔥 Tribes</a>
+      <a href="../More/more.html">🔥 More</a>
+    </nav>
+
+  </div>
+
+  <script type="module">
+    import { loadPosts } from '../supabase.js';
+    loadPosts();
+  </script>
+</body>
+</html>
